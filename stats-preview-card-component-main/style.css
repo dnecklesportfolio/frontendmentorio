@@ -7,8 +7,9 @@
    height: 100%;
    margin: 0;
    padding: 0;
-   background-color: black;
+   background-color: rgb(10, 12, 27);
    font-size: 16px;
+
  }
 
  h1, h2, h3, p {
@@ -17,28 +18,39 @@
  }
 
  h1 {
-   font-size: 2.3em;
-
+   font-size: 2em;
+   font-family: 'Inter', sans-serif;
  }
 
  p {
+
+   font-family: 'Lexend Deca', sans-serif;
    margin-top: 30px;
-   font-size: 1rem;
+   font-size: .8rem;
    width: 40ch;
    line-height: 1.5;
+   color: #85829c;
  }
 
  strong {
    color: blueviolet;
  }
 
+ .attribution {
+   font-size: 11px;
+   text-align: center;
+ }
+
+ .attribution a {
+   color: hsl(228, 45%, 44%);
+ }
+
  .container {
-   /* max-width: 1050px;
-     background-color: rgb(1, 1, 42);
-     padding: 132px; */
+   height: 100vh;
    display: flex;
-   flex-direction: row;
-   justify-content: space-between;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
  }
 
  .copy {
@@ -46,21 +58,30 @@
    line-height: 1.2;
  }
 
- .image {
+ .card__image {
    width: 100%;
-   max-width: 500px;
-   height: 100%;
    background-image: url('./images/image-header-mobile.jpg');
    background-size: cover;
  }
 
  .card {
-   width: 1110px;
-   height: 444px;
-   padding: 70px;
    border-radius: 8px;
-   background-color: rgb(50, 10, 88);
+   background-color: rgb(28, 25, 56);
    display: flex;
    flex-direction: row;
    justify-content: space-between;
+ }
+
+ .stats {
+   display: flex;
+   flex-direction: row;
+   color: whitesmoke;
+ }
+
+ .stat p {
+   margin-right: 30px;
+   font-size: .8rem;
+   text-transform: uppercase;
+   display: inline-block;
+
  }
