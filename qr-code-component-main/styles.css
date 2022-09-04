@@ -26,26 +26,28 @@ body {
 }
 .container {
   background: var(--White);
-  padding: 20px;
-  border-radius: 14px;
-  width: 400px;
+  padding: 18px;
+  border-radius: 22px;
+  width: 325px;
   text-align: center;
 }
 
 img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 1.6em;
+  font-size: 1.4em;
     font-weight: 600;
-    margin: 20px 5px;
+    margin: 0px 5px 14px 5px;
+    letter-spacing: .02em;
 }
 p{
   color: var(--GrayishBlue);
     line-height: 1.2;
-    margin: 5px 10px;
+    margin: 0px 10px 10px 10px;
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1em;
 }
