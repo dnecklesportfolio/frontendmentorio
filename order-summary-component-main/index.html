@@ -16,6 +16,12 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&family=Red+Hat+Display:wght@500;700;900&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -27,23 +33,25 @@
             alt="illustration hero"
           />
         </div>
-        <h2>Order Summary</h2>
-        <p>
-          You can now listen to millions of songs, audiobooks, and podcasts on
-          any device anywhere you like!
-        </p>
-        <div class="button">
-          <div class="icon-music">
-            <img src="./images/icon-music.svg" alt="An SVG image" />
+        <div class="details">
+          <h2>Order Summary</h2>
+          <p>
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="button">
+            <div class="icon-music">
+              <img src="./images/icon-music.svg" alt="An SVG image" />
+            </div>
+            <div class="plan">
+              <h3><strong>Annual Plan </strong></h3>
+              <h4>$59.99/year</h4>
+            </div>
+            <a href="#">Change</a>
           </div>
-          <div class="plan">
-            <h3><strong>Annual Plan </strong></h3>
-            <h4>$59.99/year</h4>
-          </div>
-          <a href="#">Change</a>
+          <button>Proceed to Payment</button>
+          <button id="cancel">Cancel Order</button>
         </div>
-        <button>Proceed to Payment</button>
-        <button>Cancel Order</button>
       </div>
       <footer class="attribution">
         Challenge by
