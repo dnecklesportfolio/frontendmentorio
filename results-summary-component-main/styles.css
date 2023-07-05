@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     }
     #challenge {
       display: grid;
@@ -65,6 +66,14 @@
       color:hsl(166, 100%, 37%);
  background-color:hsla(166, 100%, 37%,.1);
     }
+    .attribute dt img {
+      margin-inline-end: 5px;
+    }
+    .attribute dd, .attribute dt {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
     .attribute.visual {
       color:hsl(234, 85%, 45%);
  background-color: hsla(234, 85%, 45%,.1);
@@ -75,7 +84,8 @@
       color: #aaa9a9;
     }
 .attribute dd strong {
-      color: #505050
+      color: #505050;
+      margin-inline-end: 5px;
     }
 
     #summary button {
@@ -88,3 +98,42 @@
       background-color: hsl(224, 30%, 27%);
       color: white;
     }
+
+
+    #result {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #aaa9a9;
+    padding: 20px;
+    }
+
+    #result strong {
+      color:#fff
+    }
+    #result .circle {
+      padding: 0px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+      font-size: .5em;
+      background: linear-gradient(to bottom, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+      margin-bottom: 10px;
+    }
+    #result .circle p strong {
+      font-size:7em;
+      margin:0;
+      line-height: 1;
+    }
+
+    #result p {
+      font-size: .7em;
+      text-align: center;
+    }
+
+
