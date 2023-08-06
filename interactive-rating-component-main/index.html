@@ -18,20 +18,43 @@
   <main>
     <section id="rating">
       <!-- Rating state start -->
-      <img src="./images/icon-star.svg" alt="star">
+      <span id="star">
+        <img src="./images/icon-star.svg" alt="star">
+      </span>
       <h2>How did we do?</h2>
       <p>
         Please let us know how we did with your support request. All feedback is appreciated
         to help us improve our offering!
       </p>
-      <ul>
-        <li><button>1</button></li>
-        <li><button>2</button></li>
-        <li><button>3</button></li>
-        <li><button>4</button></li>
-        <li><button>5</button></li>
-      </ul>
-      <button id="btn-submit">Submit</button>
+      <form>
+        <fieldset>
+          <legend class="sr-hidden">
+            How did we do?
+          </legend>
+          <label class="form-control">
+            <input type="radio" name="rating" value="1" />
+            1
+          </label>
+          <label class="form-control">
+            <input type="radio" name="rating" value="2" />
+            2
+          </label>
+          <label class="form-control">
+            <input type="radio" name="rating" value="3" />
+            3
+          </label>
+          <label class="form-control">
+            <input type="radio" name="rating" value="4" />
+            <span class="form__text">4</span>
+          </label>
+          <label class="form-control">
+            <input type="radio" name="rating" value="5" />
+            5
+          </label>
+          </div>
+        </fieldset>
+        <button type="submit" id="btn-submit" value="Submit">Submit</button>
+      </form>
       <!-- Rating state end -->
     </section>
     <section id="thank-you">

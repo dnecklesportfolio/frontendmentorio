@@ -6,15 +6,20 @@
    --Dark-Blue: hsl(221deg 20% 17%);
    --Very-Dark-Blue: hsl(212deg 28% 12%);
    --BG-Gradient: linear-gradient(to bottom, var(--Dark-Blue), var(--Very-Dark-Blue));
-
-
+   --form-control-color: rebeccapurple;
  }
 
- * {
+ *,
+ *:before,
+ *:after {
+   box-sizing: border-box;
    margin: 0;
    padding: 0;
  }
 
+ .sr-hidden {
+   display: none;
+ }
 
  body {
    font-family: 'Overpass', sans-serif;
@@ -37,18 +42,21 @@
    display: flex;
    flex-direction: column;
    background: var(--BG-Gradient);
-   max-height: 251px;
-   max-width: 251px;
+   width: 90%;
+   /* ?instead of a media query, just set a maximum width */
+   max-width: 400px;
    border-radius: 24px;
    padding: 1.5rem;
  }
 
- #rating img {
-   background-color: hsla(25, 7%, 70%, .1);
-   padding: .5em;
-   width: 12px;
+ #star {
+   width: 40px;
+   height: 40px;
    border-radius: 50%;
-   margin-bottom: 16px;
+   background-color: hsla(25, 7%, 70%, .1);
+   display: grid;
+   place-items: center;
+   margin-bottom: 8px;
  }
 
  #rating h2 {
@@ -60,7 +68,7 @@
 
  #rating p,
  #thank-you p {
-   font-size: .7em;
+   font-size: .8em;
    line-height: 1.5;
    color: var(--Light-Grey);
    margin: 1em 0 1em;
@@ -78,38 +86,62 @@
 
  #rating ul li {
    display: inline;
+
  }
 
+ fieldset {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   border: none;
+ }
 
-
- #rating ul li button {
-   background: hsla(0, 0%, 100%, .1);
+ .form-control {
+   position: relative;
+   /* background: hsla(0, 0%, 100%, .1);
+   font-weight: 400;
+   font-size: 1rem;
    color: var(--Light-Grey);
    border-radius: 50%;
    padding: .4em;
    width: 38px;
    height: 38px;
-   margin-right: .5em;
-   border: 0;
+
+   */
+   background: hsla(0, 0%, 100%, .1);
+   width: 1.95em;
+   height: 1.95em;
+   border-radius: 50%;
+   color: var(--Light-Grey);
+   display: grid;
+   place-items: center;
    transition: 0.3s;
  }
 
- #rating ul li button:hover {
+ .form-control input[type="radio"] {
+   /* Add if not using autoprefixer */
+   -webkit-appearance: none;
+   appearance: none;
+   /* For iOS < 15 to remove gradient background */
+   background: hsla(0, 0%, 100%, .1);
+   /* Not removed via appearance */
+   margin: 0;
+   position: absolute;
+   font: inherit;
+ }
+
+ .form-control:hover {
    background-color: var(--Primary);
    color: var(--White);
    cursor: pointer;
  }
 
- #rating ul li button:focus {
-   background-color: var(--Light-Grey);
-   color: var(--White);
-
+ .form-control>input:focus {
+   background-color: var(--Primary);
  }
 
- .active {
-   background-color: var(--Light-Grey);
-   color: var(--White);
-
+ .form-control:focus:checked+.form__text {
+   color: var(--White)
  }
 
  button#btn-submit {
@@ -123,6 +155,7 @@
    color: var(--White);
    border: none;
    transition: 0.3s;
+   width: 100%;
  }
 
  button#btn-submit:hover {
@@ -155,9 +188,7 @@
  }
 
  #thank-you p {
-
    text-align: center;
-
  }
 
  #thank-you div {
@@ -170,6 +201,8 @@
  #thank-you h2 {
    color: var(--White);
  }
+
+
 
  .attribution {
    font-size: 11px;
