@@ -136,11 +136,13 @@
    cursor: pointer;
  }
 
- .form-control>input:focus {
-   background-color: var(--Primary);
+ .form-control:focus {
+   background-color: var(--Light-Grey);
+   color: var(--White)
  }
 
- .form-control:focus:checked+.form__text {
+ .form-control:focus:checked {
+   background-color: var(--form-control-color);
    color: var(--White)
  }
 
