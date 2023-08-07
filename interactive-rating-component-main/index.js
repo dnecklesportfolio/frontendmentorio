@@ -3,27 +3,29 @@ document.addEventListener("DOMContentLoaded", function(){
 //declare all variables with const
 const ratingSection = document.getElementById("rating")
 const thankYouSection = document.getElementById("thank-you")
-const btnSubmit= document.querySelector("#btn-submit")
-const ratings = document.querySelectorAll("#rating ul li button")
+ // Get a reference to the form element
+const form = document.getElementById('ratingsForm');
 const selected = document.querySelector("#selected")
+
 //hide the second screen here instead of in css to keep things in central location
 thankYouSection.style.display = "none"
 
-//set listeners on all buttons
+// Add an event listener for the form's submit event
+form.addEventListener('submit', function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
 
-Array.from(ratings).forEach(rating => {
-rating.addEventListener("click",()=>{
-//add class
-rating.classList.add("active")
-selected.innerText = rating.innerText
-})
+  // Retrieve the value from the form fields
+  selectedValue = document.querySelector('input[name="rating"]:checked');
+
+  // Do something with the retrieved data, like displaying it
+  selected.innerText = selectedValue.value
+  // You can also send the data to a server using fetch or any other method here
+ ratingSection.style.display = "none"
+ thankYouSection.style.display = "flex"
+  // Reset the form
+ form.reset();
 });
-
-
-btnSubmit.addEventListener('click',()=>{
-  ratingSection.style.display = "none"
-thankYouSection.style.display = "flex"
-})
 
 
 
