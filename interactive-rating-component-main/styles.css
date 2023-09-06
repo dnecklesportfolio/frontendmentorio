@@ -17,16 +17,13 @@
    padding: 0;
  }
 
- .sr-hidden {
-   display: none;
- }
 
  body {
    font-family: 'Overpass', sans-serif;
    background: hsl(223deg 10% 9%);
    height: 100vh;
-   width: 100vw;
    display: flex;
+   font-size: 62.5%;
    flex-direction: column;
    justify-content: center;
    align-items: center;
@@ -37,14 +34,18 @@
    margin-bottom: 1em;
  }
 
- #rating,
- #thank-you {
+ .hide {
+  visibility: hidden;
+  display: none;
+}
+ .rating,
+ .thank-you {
    display: flex;
    flex-direction: column;
    background: var(--BG-Gradient);
-   width: 90%;
+   /* width: 100%; */
    /* ?instead of a media query, just set a maximum width */
-   max-width: 400px;
+   max-width: 20rem;
    border-radius: 24px;
    padding: 1.5rem;
  }
@@ -59,34 +60,46 @@
    margin-bottom: 8px;
  }
 
- #rating h2 {
+ .rating h2 {
    color: var(--White);
    font-size: 1.3em;
    font-weight: 400;
    margin-bottom: 8px;
  }
 
- #rating p,
- #thank-you p {
+ .rating p,
+ .thank-you p {
    font-size: .8em;
    line-height: 1.5;
    color: var(--Light-Grey);
    margin: 1em 0 1em;
  }
 
- #rating ul {
+ .rating ul {
    margin: .5em 0 1em;
  }
 
- #rating ul {
+ .rating ul {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
  }
 
- #rating ul li {
+ .rating ul li {
    display: inline;
 
+ }
+
+
+
+ .sr-hidden {
+   position: absolute;
+   left: -9999px;
+   top: -9999px;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   white-space: nowrap;
  }
 
  fieldset {
@@ -96,51 +109,53 @@
    border: none;
  }
 
- .form-control {
+ .label-group {
    position: relative;
-   color: var(--White);
-   background: hsla(0, 0%, 100%, .1);
-   width: 1.95em;
-   height: 1.95em;
-   border-radius: 50%;
-   display: grid;
-   place-items: center;
+   display: flex;
    transition: 0.3s;
    cursor: pointer;
 
  }
 
- .form-control input[type="radio"] {
+ .label-group input[type="radio"] {
    /* Add if not using autoprefixer */
    -webkit-appearance: none;
    appearance: none;
-   border-radius: 50%;
-   width: 1.95em;
-   height: 1.95em;
+   background-color: var(--Dark-Blue);
    margin: 0;
-   position: absolute;
    font: inherit;
    z-index: 0;
-   cursor: pointer;
- }
-
- .form__text {
+   width: 3em;
+   height: 3em;
    position: absolute;
-   z-index: 10;
+   border-radius: 50%;
+
  }
 
- .form-control:hover {
+ .label-group input[type="radio"]+label {
+   color: var(--Medium-Grey);
+   /* background-color: var(--Dark-Blue); */
+   border-radius: 50%;
+   /* padding: 1rem; */
+   cursor: pointer;
+   /* position: absolute; */
+   z-index: 10;
+   width: 3em;
+   height: 3em;
+   padding: 1em;
+   text-align: center;
+ }
+
+ .label-group input[type="radio"]:hover + label {
    background-color: var(--Primary);
    color: var(--White);
-
  }
 
- .form-control:focus {
-   background-color: var(--Light-Grey);
-
+ .label-group input[type="radio"]:focus-visible {
+   background-color:yellow  ;
  }
 
- .form-control input[type="radio"]:focus:checked {
+ .label-group input[type="radio"]:checked + label {
    background-color: var(--Light-Grey);
    color: var(--White);
  }
@@ -150,7 +165,7 @@
    background-color: var(--Primary);
    border-radius: 16px;
    font-size: .6em;
-   letter-spacing: 1px;
+   letter-spacing: 0.1em;
    padding: .9em;
    text-transform: uppercase;
    color: var(--White);
@@ -165,18 +180,18 @@
    cursor: pointer;
  }
 
- #thank-you {
+ .thank-you {
    display: flex;
    justify-content: center;
    align-items: center;
  }
 
- #thank-you img {
+ .thank-you img {
    width: 120px;
    padding: 1.1em 0 1.5em;
  }
 
- #thank-you h6 {
+ .thank-you h6 {
    font-weight: 300;
    font-size: .8em;
    color: var(--Primary);
@@ -184,22 +199,22 @@
 
  }
 
- #thank-you h2 {
+ .thank-you h2 {
    margin-block-end: .5em;
  }
 
- #thank-you p {
+ .thank-you p {
    text-align: center;
  }
 
- #thank-you div {
+ .thank-you div {
    padding: .4em 1em .2em 1em;
    border-radius: 2em;
    background-color: hsla(255, 100%, 100%, .1);
    margin-block-end: 1.5em;
  }
 
- #thank-you h2 {
+ .thank-you h2 {
    color: var(--White);
  }
 

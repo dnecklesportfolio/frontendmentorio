@@ -16,10 +16,10 @@
 
 <body>
   <main>
-    <section id="rating">
+    <section class="rating">
       <!-- Rating state start -->
       <span id="star">
-        <img src="./images/icon-star.svg" alt="star">
+        <img src="./images/icon-star.svg">
       </span>
       <h2>How did we do?</h2>
       <p>
@@ -31,35 +31,38 @@
           <legend class="sr-hidden">
             How did we do?
           </legend>
-          <label class="form-control">
+          <!-- <label class="label-group">
             <input type="radio" name="rating" value="1" />
             <span class="form__text">1</span>
-          </label>
-          <label class="form-control">
-            <input type="radio" name="rating" value="2" />
-            <span class="form__text">2</span>
-          </label>
-          <label class="form-control">
-            <input type="radio" name="rating" value="3" />
-            <span class="form__text">3</span>
-          </label>
-          <label class="form-control">
-            <input type="radio" name="rating" value="4" />
-            <span class="form__text">4</span>
-          </label>
-          <label class="form-control">
-            <input type="radio" name="rating" value="5" />
-            <span class="form__text">5</span>
-          </label>
+          </label> -->
+          <div class="label-group">
+            <input id="radio1" type="radio" name="rating" value="1" />
+            <label for="radio1">1</label>
+          </div>
+          <div class="label-group">
+            <input id="radio2" type="radio" name="rating" value="2" />
+            <label for="radio2">2</label>
+          </div>
+          <div class="label-group">
+            <input id="radio3" type="radio" name="rating" value="3" />
+            <label for="radio3">3</label>
+          </div>
+          <div class="label-group">
+            <input id="radio4" type="radio" name="rating" value="4" />
+            <label for="radio4">4</label>
+          </div>
+          <div class="label-group">
+            <input id="radio5" type="radio" name="rating" value="5" />
+            <label for="radio5">5</label>
           </div>
         </fieldset>
         <button type="submit" id="btn-submit" value="Submit">Submit</button>
       </form>
       <!-- Rating state end -->
     </section>
-    <section id="thank-you">
+    <section class="hide thank-you">
       <!-- Thank you state start -->
-      <img src="./images/illustration-thank-you.svg" alt="thank you">
+      <img src="./images/illustration-thank-you.svg">
       <div>
         <h6>You selected <span id="selected"></span> out of 5</h6>
       </div>
@@ -74,7 +77,7 @@
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Dwayne Neckles</a>.
-    </f>
+  </footer>
 </body>
 
 </html>
