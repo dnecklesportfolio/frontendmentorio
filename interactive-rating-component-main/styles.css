@@ -21,9 +21,8 @@
  body {
    font-family: 'Overpass', sans-serif;
    background: hsl(223deg 10% 9%);
-   height: 100vh;
+   min-height: 100vh;
    display: flex;
-   font-size: 62.5%;
    flex-direction: column;
    justify-content: center;
    align-items: center;
@@ -57,7 +56,7 @@
  }
 
 
- #star {
+ .star {
    width: 40px;
    height: 40px;
    border-radius: 50%;
@@ -76,7 +75,7 @@
 
  .rating p,
  .thank-you p {
-   font-size: .8em;
+   font-size: .8rem;
    line-height: 1.5;
    color: var(--Light-Grey);
    margin: 1em 0 1em;
@@ -94,18 +93,14 @@
 
  .rating ul li {
    display: inline;
-
  }
-
-
 
  .sr-hidden {
    position: absolute;
-   left: -9999px;
-   top: -9999px;
    width: 1px;
    height: 1px;
    overflow: hidden;
+   clip: rect(1px, 1px, 1px, 1px);
    white-space: nowrap;
  }
 
@@ -171,7 +166,7 @@
    margin: 1em 0 1em;
    background-color: var(--Primary);
    border-radius: 16px;
-   font-size: .6em;
+   font-size: .6rem;
    letter-spacing: 0.1em;
    padding: .9em;
    text-transform: uppercase;
@@ -194,9 +189,9 @@
    padding: 1.1em 0 1.5em;
  }
 
- .thank-you h6 {
+ .thank-you p {
    font-weight: 300;
-   font-size: .8em;
+   font-size: .8rem;
    color: var(--Primary);
    font-family: 'Overpass', sans-serif;
 
@@ -224,7 +219,7 @@
 
 
  .attribution {
-   font-size: 11px;
+   font-size: .8rem;
    text-align: center;
    color: var(--White);
  }
